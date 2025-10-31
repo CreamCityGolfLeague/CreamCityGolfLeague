@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cream City Golf League</title>
+  <style>
+    :root {
+      --cream: #f6e7c1;
+      --city-blue: #0b4f8c;
+      --accent-yellow: #f3c447;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, var(--cream) 0%, #ffffff 100%);
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #cbd5e1;
+      z-index: 1000;
+    }
+    .container { max-width: 960px; margin: auto; padding: 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    nav a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      color: #1e293b;
+    }
+    nav a:hover, nav a.active { background-color: var(--city-blue); color: white; }
+    section { padding: 2rem 0; }
+    h2 { color: var(--city-blue); }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.5rem; border: 1px solid #cbd5e1; text-align: left; }
+    th { background-color: var(--city-blue); color: white; }
+    tr:nth-child(even) { background-color: #f1f5f9; }
+    ul { padding-left: 1.5rem; }
+    footer { text-align: center; padding: 1rem; border-top: 1px solid #cbd5e1; background: rgba(255,255,255,0.8); }
+    .menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+    @media (max-width: 768px) {
+      nav { display: none; flex-direction: column; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <div style="display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <img src="assets/logo.png" alt="Cream City Golf League" width="60" height="60" style="border-radius:4px;">
+      <div>
+        <h1>Cream City Golf League</h1>
+        <p style="margin:0; font-size:0.9rem;">Season-long individual league • April — September 2026</p>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#rules">Rules & Structure</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#courses">Courses</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section id="home">
+    <h2>Welcome to the Cream City Golf League</h2>
+    <p>A flexible, competitive, community-driven golf league based in Milwaukee. Join us for a season of rotating courses, friendly rivalries, and a championship finish.</p>
+  </section>
+
+  <section id="schedule">
+    <h2>2026 League Schedule</h2>
+    <p>Each official round spans two weeks starting on Monday. The midseason Scramble and Par 3 Challenge are bonus events not tied to points standings.</p>
+    <table>
+      <thead>
+        <tr><th>Round</th><th>Course</th><th>Start</th><th>End</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Morningstar Golfers Club</td><td>April 6, 2026</td><td>April 19, 2026</td></tr>
+        <tr><td>2</td><td>Washington County Golf Course</td><td>April 20, 2026</td><td>May 3, 2026</td></tr>
+        <tr><td>3</td><td>Brown Deer Park Golf Course</td><td>May 4, 2026</td><td>May 17, 2026</td></tr>
+        <tr><td>4</td><td>The Bull at Pinehurst Farms</td><td>May 18, 2026</td><td>May 31, 2026</td></tr>
+        <tr><td>5</td><td>Hawks View Golf Club</td><td>June 1, 2026</td><td>June 14, 2026</td></tr>
+        <tr><td>6</td><td>Naga-Waukee War Memorial</td><td>June 15, 2026</td><td>June 28, 2026</td></tr>
+        <tr><td>7</td><td>Geneva National – Palmer</td><td>July 13, 2026</td><td>July 26, 2026</td></tr>
+        <tr><td>8</td><td>Broadlands Golf Club</td><td>July 27, 2026</td><td>August 9, 2026</td></tr>
+        <tr><td>9</td><td>The Bog</td><td>August 10, 2026</td><td>August 23, 2026</td></tr>
+        <tr><td>10</td><td>University Ridge (Championship – Double Points)</td><td>September 21, 2026</td><td>October 4, 2026</td></tr>
+      </tbody>
+    </table>
+    <h3>Bonus Events</h3>
+    <ul>
+      <li><strong>Midseason Scramble</strong> — Club at Lac La Belle (TBD)</li>
+      <li><strong>Par 3 Challenge</strong> — Barn Hollow at Hawk’s View (June 1 - June 30)</li>
+    </ul>
+  </section>
+
+  <section id="rules">
+    <h2>Rules & Structure</h2>
+    <h3>League Format</h3>
+    <ul>
+      <li><strong>Duration:</strong> April through September 2026</li>
+      <li><strong>Events:</strong> 10 scoring rounds, 1 Scramble, 1 Par 3 Challenge, and a Championship</li>
+      <li><strong>Flexibility:</strong> Each round lasts 2 weeks</li>
+      <li><strong>Championship:</strong> Final event awards double points</li>
+    </ul>
+    <h3>Flights & Handicaps</h3>
+    <ul>
+      <li><strong>Flight A:</strong> 0.0 – 6.9</li>
+      <li><strong>Flight B:</strong> 7.0 – 12.9</li>
+      <li><strong>Flight C:</strong> 13.0 – 18.9</li>
+      <li><strong>Flight D:</strong> 19.0+</li>
+      <li><strong>Handicaps:</strong> GHIN or calculated after 3 rounds</li>
+    </ul>
+    <h3>Scoring & Points</h3>
+    <ul>
+      <li><strong>1,000 total points</strong> awarded per flight each event</li>
+      <li><strong>Double points</strong> at the Championship</li>
+      <li><strong>Participation points</strong> for attending every event</li>
+    </ul>
+    <h3>Payouts</h3>
+    <ul>
+      <li><strong>1st Place:</strong> Low Net</li>
+      <li><strong>2nd Place:</strong> Low Net</li>
+      <li><strong>3rd Place:</strong> Low Gross</li>
+      <li><strong>Ties:</strong> USGA recommendations</li>
+    </ul>
+  </section>
+
+  <section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p>Standings will update automatically via the league app once the season begins.</p>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+    <ul>
+      <li>Morningstar</li>
+      <li>Washington County</li>
+      <li>Brown Deer Park</li>
+      <li>The Bull</li>
+      <li>Hawks View</li>
+      <li>Naga-Waukee</li>
+      <li>Lac La Belle</li>
+      <li>Geneva National – Palmer</li>
+      <li>Broadlands</li>
+      <li>The Bog</li>
+      <li>University Ridge</li>
+    </ul>
+  </section>
+
+  <section id="join">
+    <h2>Join the League</h2>
+    <p>Submit your name, email, and GHIN index to register interest. Payment and app setup (18Birdies or Unknown Golf) to follow.</p>
+    <form style="display:grid; gap:0.5rem; max-width:400px;">
+      <input type="text" placeholder="Full Name" style="padding:0.5rem; border:1px solid #cbd5e1; border-radius:4px;">
+      <input type="email" placeholder="Email" style="padding:0.5rem; border:1px solid #cbd5e1; border-radius:4px;">
+      <input type="text" placeholder="GHIN Index (optional)" style="padding:0.5rem; border:1px solid #cbd5e1; border-radius:4px;">
+      <textarea placeholder="Notes (teammates, tee preference)" rows="4" style="padding:0.5rem; border:1px solid #cbd5e1; border-radius:4px;"></textarea>
+      <button type="submit" style="padding:0.5rem 1rem; background-color:var(--city-blue); color:white; border:none; border-radius:4px; cursor:pointer;">Submit</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@creamcitygolf.com" style="color:var(--city-blue); text-decoration:underline;">info@creamcitygolf.com</a></p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Cream City Golf League — All rights reserved.
+</footer>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById('navbar');
+  if (nav.style.display === 'flex') { nav.style.display = 'none'; }
+  else { nav.style.display = 'flex'; nav.style.flexDirection = 'column'; }
+}
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  let scrollPos = window.scrollY + 100;
+  sections.forEach(sec => {
+    const top = sec.offsetTop;
+    const bottom = top + sec.offsetHeight;
+    const id = sec.getAttribute('id');
+    const link = document.querySelector(`nav a[href='#${id}']`);
+    if(scrollPos >= top && scrollPos < bottom) {
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
